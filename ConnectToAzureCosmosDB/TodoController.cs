@@ -18,7 +18,7 @@ namespace FunctionAppWithCosmosDB.Controllers
             _cosmosDBService = cosmosDBService;
         }
 
-        [Function("GetTodos")]
+        [Function("GetAllTodos")]
         public async Task<IActionResult> GetTodosAsync(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "todos")] HttpRequest req,
             ILogger log)
